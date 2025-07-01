@@ -271,16 +271,42 @@ body {
   font-weight: 600;
 }
 
+/* About Section Image */
+.about-image {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--border-radius);
+  transition: var(--transition-smooth);
+  cursor: pointer;
+}
+
+.about-image:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.about-image img {
+  transition: var(--transition-smooth);
+  filter: brightness(1) contrast(1);
+}
+
+.about-image:hover img {
+  transform: scale(1.05);
+  filter: brightness(1.1) contrast(1.1);
+}
+
 /* Gallery */
 .gallery-item {
   position: relative;
   overflow: hidden;
   border-radius: var(--border-radius);
   transition: var(--transition);
+  cursor: pointer;
 }
 
 .gallery-item:hover {
-  transform: scale(1.05);
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
 }
 
 .gallery-item img {
@@ -291,7 +317,8 @@ body {
 }
 
 .gallery-item:hover img {
-  transform: scale(1.1);
+  transform: scale(1.08);
+  filter: brightness(1.05);
 }
 
 /* Hours Card */
