@@ -27,6 +27,7 @@ body {
   line-height: 1.6;
   color: var(--text-color);
   scroll-behavior: smooth;
+  padding-top: 76px; /* Height of fixed navbar */
 }
 
 /* Hero Section */
@@ -39,6 +40,8 @@ body {
   position: relative;
   color: white;
   background-attachment: fixed;
+  margin-top: -76px; /* Compensate for fixed navbar */
+  padding-top: 76px; /* Add padding to maintain content position */
 }
 
 .hero-overlay {
@@ -92,8 +95,11 @@ body {
 
 /* Navigation */
 .navbar {
-  position: sticky !important;
+  position: fixed !important;
   top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
   z-index: 1030;
   backdrop-filter: blur(10px);
   background-color: rgba(33, 37, 41, 0.95) !important;
