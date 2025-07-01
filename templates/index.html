@@ -95,75 +95,136 @@
 <section id="services" class="py-5">
     <div class="container">
         <h2 class="section-title text-center mb-5">Our Services</h2>
-        <div class="row g-4">
-            <div class="col-lg-4 col-md-6">
-                <div class="service-card">
-                    <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1622287162716-f311baa1a2b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');">
-                        <div class="service-overlay">
-                            <h3>Classic Haircut</h3>
-                            <p>Professional cuts tailored to your style</p>
-                            <p class="price">R150</p>
-                        </div>
+        
+        <!-- Combo Special Highlight -->
+        <div class="row justify-content-center mb-5">
+            <div class="col-lg-8">
+                <div class="combo-special-card">
+                    <div class="combo-header">
+                        <h3><i class="fas fa-star"></i> COMBO SPECIAL</h3>
+                        <p class="combo-subtitle">Complete Premium Package</p>
                     </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="service-card">
-                    <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1621605815971-fbc98d665033?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');">
-                        <div class="service-overlay">
-                            <h3>Beard Grooming</h3>
-                            <p>Expert beard trimming and styling</p>
-                            <p class="price">R80</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="service-card">
-                    <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1621607512214-68297480165e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');">
-                        <div class="service-overlay">
-                            <h3>Hot Towel Shave</h3>
-                            <p>Traditional wet shave experience</p>
-                            <p class="price">R120</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="service-card">
-                    <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1503951914875-452162b0f3f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');">
-                        <div class="service-overlay">
-                            <h3>Hair Wash & Style</h3>
-                            <p>Complete grooming service</p>
-                            <p class="price">R100</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="service-card">
-                    <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1620331311520-246422fd82f9?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');">
-                        <div class="service-overlay">
-                            <h3>Eyebrow Trim</h3>
-                            <p>Professional eyebrow grooming</p>
-                            <p class="price">R50</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="service-card combo-highlight">
-                    <div class="service-content">
-                        <h3><i class="fas fa-star me-2"></i>Full Service Combo</h3>
+                    <div class="combo-content">
                         <div class="combo-services">
-                            <p><i class="fas fa-check me-2"></i>Haircut</p>
-                            <p><i class="fas fa-check me-2"></i>Beard Grooming</p>
-                            <p><i class="fas fa-check me-2"></i>Hot Towel Treatment</p>
-                            <p><i class="fas fa-check me-2"></i>Hair Wash & Style</p>
+                            <ul>
+                                <li><i class="fas fa-scissors"></i> Hair Cut</li>
+                                <li><i class="fas fa-cut"></i> Shave</li>
+                                <li><i class="fas fa-spa"></i> Face Massage</li>
+                                <li><i class="fas fa-hand-sparkles"></i> Head Massage</li>
+                            </ul>
                         </div>
-                        <div class="combo-pricing">
-                            <p class="combo-price">R280</p>
-                            <p class="combo-savings">Save R70!</p>
+                        <div class="combo-price">
+                            <span class="big-price">R300</span>
+                            <p class="combo-tagline">All For One Great Price!</p>
+                        </div>
+                    </div>
+                    <div class="combo-book">
+                        <a href="{{ url_for('book') }}" class="btn btn-primary btn-lg combo-btn">
+                            <i class="fab fa-whatsapp me-2"></i>BOOK NOW
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Service Categories -->
+        <div class="row g-4">
+            <!-- Men's Services -->
+            <div class="col-lg-4">
+                <div class="service-category-card">
+                    <div class="category-header">
+                        <h3><i class="fas fa-male"></i> GENTS</h3>
+                    </div>
+                    <div class="service-list">
+                        <div class="service-item">
+                            <span class="service-name">Pensioners</span>
+                            <span class="service-price">R100</span>
+                        </div>
+                        <div class="service-item">
+                            <span class="service-name">Hair Cut</span>
+                            <span class="service-price">R120</span>
+                        </div>
+                        <div class="service-item">
+                            <span class="service-name">Shave</span>
+                            <span class="service-price">R80</span>
+                        </div>
+                        <div class="service-item">
+                            <span class="service-name">Wash & Cut</span>
+                            <span class="service-price">R150</span>
+                        </div>
+                        <div class="service-item">
+                            <span class="service-name">Steam Shave</span>
+                            <span class="service-price">R100</span>
+                        </div>
+                        <div class="service-item">
+                            <span class="service-name">Face Massage</span>
+                            <span class="service-price">R100</span>
+                        </div>
+                        <div class="service-item">
+                            <span class="service-name">Full Facial</span>
+                            <span class="service-price">R200</span>
+                        </div>
+                        <div class="service-item">
+                            <span class="service-name">Ears</span>
+                            <span class="service-price">R50</span>
+                        </div>
+                        <div class="service-item">
+                            <span class="service-name">Nose</span>
+                            <span class="service-price">R50</span>
+                        </div>
+                        <div class="service-item">
+                            <span class="service-name">Eyebrows</span>
+                            <span class="service-price">R80</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ladies Services -->
+            <div class="col-lg-4">
+                <div class="service-category-card">
+                    <div class="category-header">
+                        <h3><i class="fas fa-female"></i> LADIES</h3>
+                    </div>
+                    <div class="service-list">
+                        <div class="service-item">
+                            <span class="service-name">Hair Trim</span>
+                            <span class="service-price">R150</span>
+                        </div>
+                        <div class="service-item">
+                            <span class="service-name">Eye Brows</span>
+                            <span class="service-price">R80</span>
+                        </div>
+                        <div class="service-item">
+                            <span class="service-name">Upper Lip</span>
+                            <span class="service-price">R40</span>
+                        </div>
+                        <div class="service-item">
+                            <span class="service-name">Full Face</span>
+                            <span class="service-price">R150</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Waxing Services -->
+            <div class="col-lg-4">
+                <div class="service-category-card">
+                    <div class="category-header">
+                        <h3><i class="fas fa-spa"></i> WAXING</h3>
+                    </div>
+                    <div class="service-list">
+                        <div class="service-item">
+                            <span class="service-name">Full Face</span>
+                            <span class="service-price">R200</span>
+                        </div>
+                        <div class="service-item">
+                            <span class="service-name">Eyebrows</span>
+                            <span class="service-price">R80</span>
+                        </div>
+                        <div class="service-item">
+                            <span class="service-name">Upper Lip</span>
+                            <span class="service-price">R40</span>
                         </div>
                     </div>
                 </div>
