@@ -96,43 +96,12 @@
     <div class="container">
         <h2 class="section-title text-center mb-5">Our Services</h2>
         
-        <!-- Combo Special Highlight -->
-        <div class="row justify-content-center mb-5">
-            <div class="col-lg-8">
-                <div class="combo-special-card">
-                    <div class="combo-header">
-                        <h3><i class="fas fa-star"></i> COMBO SPECIAL</h3>
-                        <p class="combo-subtitle">Complete Premium Package</p>
-                    </div>
-                    <div class="combo-content">
-                        <div class="combo-services">
-                            <ul>
-                                <li><i class="fas fa-scissors"></i> Hair Cut</li>
-                                <li><i class="fas fa-cut"></i> Shave</li>
-                                <li><i class="fas fa-spa"></i> Face Massage</li>
-                                <li><i class="fas fa-hand-sparkles"></i> Head Massage</li>
-                            </ul>
-                        </div>
-                        <div class="combo-price">
-                            <span class="big-price">R300</span>
-                            <p class="combo-tagline">All For One Great Price!</p>
-                        </div>
-                    </div>
-                    <div class="combo-book">
-                        <a href="{{ url_for('book') }}" class="btn btn-primary btn-lg combo-btn">
-                            <i class="fab fa-whatsapp me-2"></i>BOOK NOW
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <!-- Service Categories -->
-        <div class="row g-4">
+        <div class="row g-4 mb-5">
             <!-- Men's Services -->
             <div class="col-lg-4">
                 <div class="service-category-card">
-                    <div class="category-header">
+                    <div class="category-header gents-bg">
                         <h3><i class="fas fa-male"></i> GENTS</h3>
                     </div>
                     <div class="service-list">
@@ -183,7 +152,7 @@
             <!-- Ladies Services -->
             <div class="col-lg-4">
                 <div class="service-category-card">
-                    <div class="category-header">
+                    <div class="category-header ladies-bg">
                         <h3><i class="fas fa-female"></i> LADIES</h3>
                     </div>
                     <div class="service-list">
@@ -210,7 +179,7 @@
             <!-- Waxing Services -->
             <div class="col-lg-4">
                 <div class="service-category-card">
-                    <div class="category-header">
+                    <div class="category-header waxing-bg">
                         <h3><i class="fas fa-spa"></i> WAXING</h3>
                     </div>
                     <div class="service-list">
@@ -226,6 +195,37 @@
                             <span class="service-name">Upper Lip</span>
                             <span class="service-price">R40</span>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Combo Special Highlight -->
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="combo-special-card">
+                    <div class="combo-header">
+                        <h3><i class="fas fa-star"></i> COMBO SPECIAL</h3>
+                        <p class="combo-subtitle">Complete Premium Package</p>
+                    </div>
+                    <div class="combo-content">
+                        <div class="combo-services">
+                            <ul>
+                                <li><i class="fas fa-scissors"></i> Hair Cut</li>
+                                <li><i class="fas fa-cut"></i> Shave</li>
+                                <li><i class="fas fa-spa"></i> Face Massage</li>
+                                <li><i class="fas fa-hand-sparkles"></i> Head Massage</li>
+                            </ul>
+                        </div>
+                        <div class="combo-price">
+                            <span class="big-price">R300</span>
+                            <p class="combo-tagline">All For One Great Price!</p>
+                        </div>
+                    </div>
+                    <div class="combo-book">
+                        <a href="{{ url_for('book') }}" class="btn btn-primary btn-lg combo-btn">
+                            <i class="fab fa-whatsapp me-2"></i>BOOK NOW
+                        </a>
                     </div>
                 </div>
             </div>
