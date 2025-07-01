@@ -514,19 +514,23 @@ section {
 }
 
 .btn-outline-light {
-  background: linear-gradient(135deg, var(--accent-red), var(--red-hover));
+  background: transparent !important;
   border: 2px solid white;
   color: white !important;
+  position: relative;
+  overflow: visible;
 }
 
 .btn-outline-light::before {
-  background: linear-gradient(135deg, var(--accent-blue), var(--blue-hover));
+  display: none;
 }
 
 .btn-outline-light:hover {
-  border-color: var(--accent-blue);
-  color: white !important;
-  transform: translateY(-3px);
+  background: white !important;
+  border-color: white;
+  color: var(--dark-color) !important;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-medium);
 }
 
 /* Responsive Design */
