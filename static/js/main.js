@@ -69,14 +69,8 @@ function initWhatsAppButton() {
     const whatsappButton = document.getElementById('whatsapp-float');
     
     if (whatsappButton) {
-        // Show/hide WhatsApp button based on scroll position
-        window.addEventListener('scroll', function() {
-            if (window.scrollY > 300) {
-                whatsappButton.style.display = 'block';
-            } else {
-                whatsappButton.style.display = 'none';
-            }
-        });
+        // Keep WhatsApp button always visible
+        whatsappButton.style.display = 'block';
 
         // Add click tracking
         whatsappButton.addEventListener('click', function() {
