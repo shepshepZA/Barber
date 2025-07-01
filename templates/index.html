@@ -201,31 +201,43 @@
         </div>
 
         <!-- Combo Special Highlight -->
-        <div class="row justify-content-center">
-            <div class="col-lg-10">
-                <div class="combo-special-card">
-                    <div class="combo-header">
-                        <h3><i class="fas fa-star"></i> COMBO SPECIAL</h3>
+        <div class="combo-special-section">
+            <div class="combo-overlay"></div>
+            <div class="container">
+                <div class="row justify-content-center text-center">
+                    <div class="col-lg-8">
+                        <h2 class="combo-title"><i class="fas fa-star me-2"></i>COMBO SPECIAL</h2>
+                        <div class="combo-decorative-line"></div>
                         <p class="combo-subtitle">Complete Premium Package</p>
-                    </div>
-                    <div class="combo-content">
-                        <div class="combo-services">
-                            <ul>
-                                <li><i class="fas fa-scissors"></i> Hair Cut</li>
-                                <li><i class="fas fa-cut"></i> Shave</li>
-                                <li><i class="fas fa-spa"></i> Face Massage</li>
-                                <li><i class="fas fa-hand-sparkles"></i> Head Massage</li>
-                            </ul>
+                        
+                        <div class="combo-services-list mt-4">
+                            <div class="service-item-inline">
+                                <i class="fas fa-scissors"></i> Hair Cut
+                            </div>
+                            <div class="service-item-inline">
+                                <i class="fas fa-cut"></i> Shave
+                            </div>
+                            <div class="service-item-inline">
+                                <i class="fas fa-spa"></i> Face Massage
+                            </div>
+                            <div class="service-item-inline">
+                                <i class="fas fa-hand-sparkles"></i> Head Massage
+                            </div>
                         </div>
-                        <div class="combo-price">
-                            <span class="big-price">R300</span>
+
+                        <div class="combo-pricing mt-4">
+                            <div class="big-price">R300</div>
                             <p class="combo-tagline">All For One Great Price!</p>
                         </div>
-                    </div>
-                    <div class="combo-book">
-                        <a href="{{ url_for('book') }}" class="btn btn-primary btn-lg combo-btn">
-                            <i class="fab fa-whatsapp me-2"></i>BOOK NOW
-                        </a>
+
+                        <div class="combo-buttons mt-4">
+                            <a href="{{ url_for('book') }}" class="btn btn-primary btn-lg me-3">
+                                <i class="fab fa-whatsapp me-2"></i>BOOK NOW
+                            </a>
+                            <a href="#contact" class="btn btn-outline-light btn-lg">
+                                <i class="fas fa-phone me-2"></i>Call Us
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
