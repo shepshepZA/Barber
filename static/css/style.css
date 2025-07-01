@@ -453,7 +453,7 @@ section {
 .whatsapp-float a:hover {
   transform: translateY(-5px) scale(1.05);
   box-shadow: 0 15px 35px rgba(0,119,194,0.5);
-  border-color: rgba(0,119,194,0.6);
+  border-color: var(--accent-blue);
   color: white;
   text-decoration: none;
 }
@@ -626,6 +626,11 @@ section {
     letter-spacing: 0.5px;
     border-radius: 35px;
     box-shadow: 0 6px 20px rgba(214,40,40,0.3);
+  }
+  
+  .whatsapp-float a:hover {
+    box-shadow: 0 12px 30px rgba(0,119,194,0.4);
+    border-color: var(--accent-blue);
   }
   
   .whatsapp-float a .fab {
