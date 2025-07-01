@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{% block meta_description %}Professional barber shop in Hout Bay, Cape Town. Expert haircuts, beard grooming, and traditional barbering services. Book your appointment today!{% endblock %}">
+    <meta name="keywords" content="barber shop, Hout Bay, Cape Town, haircut, beard grooming, traditional barbering, men's grooming">
+    <meta name="author" content="Hout Bay Barber Shop">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ request.url }}">
+    <meta property="og:title" content="{% block og_title %}Hout Bay Barber Shop - Professional Barbering Services{% endblock %}">
+    <meta property="og:description" content="{% block og_description %}Expert barber services in Hout Bay, Cape Town. Traditional and modern cuts, beard grooming, and professional styling.{% endblock %}">
+    <meta property="og:image" content="{{ url_for('static', filename='images/og-image.jpg', _external=True) }}">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="{{ request.url }}">
+    <meta property="twitter:title" content="{% block twitter_title %}Hout Bay Barber Shop - Professional Barbering Services{% endblock %}">
+    <meta property="twitter:description" content="{% block twitter_description %}Expert barber services in Hout Bay, Cape Town. Traditional and modern cuts, beard grooming, and professional styling.{% endblock %}">
+    
+    <title>{% block title %}Hout Bay Barber Shop - Professional Barbering Services in Cape Town{% endblock %}</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BarberShop",
+      "name": "Hout Bay Barber Shop",
+      "image": "{{ url_for('static', filename='images/shop-front.jpg', _external=True) }}",
+      "description": "Professional barber shop in Hout Bay, Cape Town offering expert haircuts, beard grooming, and traditional barbering services.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Main Road",
+        "addressLocality": "Hout Bay",
+        "addressRegion": "Western Cape",
+        "postalCode": "7806",
+        "addressCountry": "ZA"
+      },
+      "telephone": "+27-21-790-1234",
+      "openingHours": [
+        "Mo-Fr 08:00-18:00",
+        "Sa 08:00-16:00"
+      ],
+      "priceRange": "$$",
+      "sameAs": [
+        "https://www.facebook.com/houtbaybarber",
+        "https://www.instagram.com/houtbaybarber"
+      ]
+    }
+    </script>
+</head>
+<body>
+    {% block content %}{% endblock %}
+    
+    <!-- WhatsApp Float Button -->
+    <div class="whatsapp-float" id="whatsapp-float">
+        <a href="https://wa.me/27123456789?text=Hi! I'd like to know more about your barber services." target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+    
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
