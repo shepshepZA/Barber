@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initWhatsAppButton();
     initContactForm();
     initMobileMenu();
+    initStickyNavbar();
     
     console.log('Hout Bay Barber Shop website loaded successfully!');
 });
@@ -140,6 +141,61 @@ function initMobileMenu() {
             });
         });
     }
+}
+
+/**
+ * Initialize sticky navbar with scroll effects
+ */
+function initStickyNavbar() {
+    const navbar = document.querySelector('.navbar');
+    let lastScrollTop = 0;
+    
+    if (navbar) {
+        window.addEventListener('scroll', function() {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            // Add/remove background opacity based on scroll
+            if (scrollTop > 50) {
+                navbar.classList.add('navbar-scrolled');
+                navbar.style.backgroundColor = 'rgba(33, 37, 41, 0.98)';
+            } else {
+                navbar.classList.remove('navbar-scrolled');
+                navbar.style.backgroundColor = 'rgba(33, 37, 41, 0.95)';
+            }
+            
+            // Update active nav link based on current section
+            updateActiveNavLink();
+            
+            lastScrollTop = scrollTop;
+        });
+    }
+}
+
+/**
+ * Update active navigation link based on current section
+ */
+function updateActiveNavLink() {
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.navbar-nav .nav-link[href^="#"]');
+    
+    let currentSection = '';
+    
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop - 100;
+        const sectionHeight = section.offsetHeight;
+        const scrollPos = window.pageYOffset;
+        
+        if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+            currentSection = section.getAttribute('id');
+        }
+    });
+    
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${currentSection}`) {
+            link.classList.add('active');
+        }
+    });
 }
 
 /**
