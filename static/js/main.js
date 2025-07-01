@@ -236,15 +236,16 @@ function initLazyLoading() {
  * Add parallax effect to hero section
  */
 function initParallax() {
-    const hero = document.querySelector('.hero-section');
+    // Disabled parallax to prevent layout issues
+    // const hero = document.querySelector('.hero-section');
     
-    if (hero) {
-        window.addEventListener('scroll', function() {
-            const scrolled = window.pageYOffset;
-            const rate = scrolled * -0.5;
-            hero.style.transform = `translateY(${rate}px)`;
-        });
-    }
+    // if (hero) {
+    //     window.addEventListener('scroll', function() {
+    //         const scrolled = window.pageYOffset;
+    //         const rate = scrolled * -0.5;
+    //         hero.style.transform = `translateY(${rate}px)`;
+    //     });
+    // }
 }
 
 /**
