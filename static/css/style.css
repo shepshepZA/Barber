@@ -44,7 +44,7 @@ body {
   align-items: center;
   position: relative;
   color: white;
-  background-attachment: fixed;
+  background-attachment: scroll;
   margin-top: -76px; /* Compensate for fixed navbar */
   padding-top: 76px; /* Add padding to maintain content position */
 }
